@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors'); 
 
 // Router 
-const nasaRouter = require("./routes/nasaRoutes"); 
+const nasaRoutes = require("./routes/nasaRoutes"); 
 
 const app = express(); 
 
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors()); 
 
 // NASA API Routes 
-app.use("/api/nasa", require("./routes/nasa")); 
+app.use("/api/nasa", nasaRoutes); 
 
 // CONNECTING TO THE SERVER 
 const PORT = process.env.PORT || 5000; 
