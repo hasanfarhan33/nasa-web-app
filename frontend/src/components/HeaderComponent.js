@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
+import TelescopeLogo from "../assets/telescope-logo(yellow).png"; 
 
 const HeaderComponent = () => {
     return (
         <header className="bg-slate-800 px-6 py-4 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
-                {/* TODO: ENTER THE LOGO HERE */}
-                <h1 className="font-bold text-3xl text-white">SpacePeek</h1>
+                <div className="flex gap-6">
+                    <img src={TelescopeLogo} alt="Telescope Logo" className="w-12 h-12 mb-2"></img>
+                    <h1 className="font-bold text-3xl text-white">SpacePeek</h1>
+                </div>
 
                 {/* Navigation Links */}
                 <nav>

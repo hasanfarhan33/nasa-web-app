@@ -16,24 +16,20 @@ const getMarsWeather = async(req, res) => {
             const minTemperature = curSol.AT ? curSol.AT.mn: "Min Temp not available"; 
             const maxTemperature = curSol.AT ? curSol.AT.mx: "Max temp not available"; 
             
-            // Min - Max Atmospheric Pressure 
-            const minPressure = curSol.PRE ? curSol.PRE.mn: "Min Pressure not available"; 
-            const maxPressure = curSol.PRE ? curSol.PRE.mx: "Max Pressure not available"; 
+            // Average Pressure
+            const avgPressure = curSol.PRE ? curSol.PRE.av: "Pressure Data Not Available";
     
             // Min - Max Wind Speed 
-            const minSpeed = curSol.HWS ? curSol.HWS.mn: "Min speed not available"; 
-            const maxSpeed = curSol.HWS ? curSol.HWS.mx: "Max speed not available"; 
+            const averageSpeed = curSol.HWS ? curSol.HWS.av: "Average speed not available"; 
     
     
             const dataPerSol = {
                 "Current Sol": solKey, 
                 "Average Atmospheric Temperature": Math.round(avgAtmosphericTemperature * 100) / 100, 
                 "Min Temperature (Celcius)": Math.round(minTemperature * 100) / 100, 
-                "Max Temperature (Celcius)": Math.round(maxTemperature * 100) / 100, 
-                "Min Pressure (Pascals)": Math.round(minPressure * 100) / 100, 
-                "Max Pressure (Pascals)": Math.round(maxPressure * 100) / 100, 
-                "Min Wind Speed (m/s)": Math.round(minSpeed * 100) / 100, 
-                "Max Wind Speed (m/s)": Math.round(maxSpeed * 100) / 100, 
+                "Max Temperature (Celcius)": Math.round(maxTemperature * 100) / 100,
+                "Average Pressure (Pascals)": Math.round(avgPressure * 100) / 100,
+                "Average Wind Speed (m/s)": Math.round(averageSpeed * 100) / 100
             }
 
             solsData.push(dataPerSol)
