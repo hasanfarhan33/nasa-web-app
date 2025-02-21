@@ -37,10 +37,9 @@ const getMarsWeather = async(req, res) => {
         }
 
         res.json(solsData); 
-
-        // res.json(data); 
+ 
     } catch (error) {
-        console.log("File name: nasaMarsWeatherController.js --> Could not get mars weather info"); 
+        console.error("File name: nasaMarsWeatherController.js --> Could not get mars weather info"); 
         res.status(500).json({error: "Could not get Mars weather info", details: error.message}); 
     }
 }

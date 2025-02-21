@@ -16,7 +16,7 @@ const getAPOD = async(req, res) => {
         res.json(processedData); 
         // res.json(data);
     } catch (error) {
-        console.log("File name: apodNASAController.js --> Error fetching NASA APOD data"); 
+        console.error("File name: apodNASAController.js --> Error fetching NASA APOD data"); 
         res.status(500).json({error: "Error fetching NASA APOD data"}); 
     }
 }; 

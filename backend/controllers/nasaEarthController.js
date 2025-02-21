@@ -29,7 +29,7 @@ const getEarth = async(req, res) => {
         }
 
     } catch (error) {
-        console.log("File name: nasaEarthController.js --> Error getting NASA Earth images"); 
+        console.error("File name: nasaEarthController.js --> Error getting NASA Earth images"); 
         res.status(500).json({error: "Error getting NASA Earth image"}); 
         
     }
