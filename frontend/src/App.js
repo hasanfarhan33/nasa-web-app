@@ -8,6 +8,7 @@ import HeaderComponent from './components/HeaderComponent';
 // Pages
 import HomePage from './pages/HomePage';
 import MarsPage from './pages/MarsPage';
+import FooterComponent from './components/FooterComponent';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path = "/" element = {<HomePage />} />
         <Route path = "/mars" element = {<MarsPage />} />
       </Routes>
+      <FooterComponent></FooterComponent>
     </Router>
   );
 }

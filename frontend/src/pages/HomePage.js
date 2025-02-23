@@ -15,16 +15,6 @@ const HomePage = () => {
                 <ul className="flex flex-wrap justify-center gap-20 font-bold text-xl">
                     <li>
                         <NavLink 
-                            to="/earth" 
-                            className="relative text-gray-800 transition duration-300 ease-in-out hover:text-blue-600 hover:scale-105 hover:underline underline-offset-4"
-                        >
-                            <img src={EarthLogo} alt="Earth" className="w-24 h-24 mb-2"></img>
-
-                            Earth
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
                             to="/mars" 
                             className="relative text-gray-800 transition duration-300 ease-in-out hover:text-red-500 hover:scale-105 hover:underline underline-offset-4"
                         >

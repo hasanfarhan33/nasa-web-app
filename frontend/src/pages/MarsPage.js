@@ -1,5 +1,6 @@
 import MarsWeatherComponent from "../components/MarsWeatherComponent";
 import MarsLogo from '../assets/mars-logo.png';
+import MarsPhotosComponent from "../components/MarsPhotosComponent";
 
 const MarsPage = () => {
     return (
@@ -30,6 +31,7 @@ const MarsPage = () => {
                 </div>
             </section>
             <MarsWeatherComponent />
+            <MarsPhotosComponent></MarsPhotosComponent>
         </main>
     ); 
 }
