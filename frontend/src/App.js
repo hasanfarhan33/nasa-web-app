@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import HeaderComponent from './components/HeaderComponent';
+import FooterComponent from './components/FooterComponent';
 
 // Pages
 import HomePage from './pages/HomePage';
 import MarsPage from './pages/MarsPage';
-import FooterComponent from './components/FooterComponent';
+import AsteroidsPage from "./pages/AsteroidsPage"; 
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path = "/" element = {<HomePage />} />
         <Route path = "/mars" element = {<MarsPage />} />
+        <Route path='/asteroids' element = {<AsteroidsPage></AsteroidsPage>}></Route>
       </Routes>
       <FooterComponent></FooterComponent>
     </Router>
