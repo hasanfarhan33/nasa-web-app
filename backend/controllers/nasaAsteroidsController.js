@@ -5,6 +5,12 @@ const getAsteroids = async(req, res) => {
         // These variables should be equal 
         const {start_date, end_date = null} = req.query;
 
+        
+        if(end_date && (end_date.valueOf() < start_date.valueOf())) {
+            console.error("Start date cannot be after end date.")
+            return res.status(400).json({error: "Start date cannot be after end date."})
+        }
+
         // Check if the parameters are avaiable
         if(!start_date) {
             return res.status(400).json({error: "Missing required parameter -> Start Date (YYYY-MM-DD)"})

@@ -1,8 +1,6 @@
 import ApodComponent from "../components/ApodComponent";
-import { NavLink } from "react-router-dom";
-import EarthLogo from '../assets/earth-logo.png'; 
+import { NavLink } from "react-router-dom"; 
 import MarsLogo from '../assets/mars-logo.png'; 
-import MoonLogo from '../assets/moon-logo.png'; 
 import AsteroidLogo from '../assets/asteroid-logo.png'; 
 
 const HomePage = () => {
@@ -12,24 +10,14 @@ const HomePage = () => {
             <ApodComponent />
             <section className="mt-10 text-center">
                 <h2 className="text-3xl font-bold mb-6 underline">Explore</h2>
-                <ul className="flex flex-wrap justify-center gap-20 font-bold text-xl">
+                <ul className="flex flex-wrap justify-center gap-10 md:gap-20 font-bold text-xl">
                     <li>
                         <NavLink 
                             to="/mars" 
                             className="relative text-gray-800 transition duration-300 ease-in-out hover:text-red-500 hover:scale-105 hover:underline underline-offset-4"
                         >
-                            <img src={MarsLogo} alt="Mars" className="w-24 h-24 mb-2"></img>
+                            <img src={MarsLogo} alt="Mars" className="w-16 h-16 md:w-24 md:h-24 mb-2"></img>
                             Mars
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink 
-                            to="/moon" 
-                            className="relative text-gray-800 transition duration-300 ease-in-out hover:text-gray-500 hover:scale-105 hover:underline underline-offset-4"
-                        >
-                            <img src={MoonLogo} alt="Moon" className="w-24 h-24 mb-2"></img>
-
-                            Moon
                         </NavLink>
                     </li>
                     <li>
@@ -37,7 +25,7 @@ const HomePage = () => {
                             to="/asteroids" 
                             className="relative text-gray-800 transition duration-300 ease-in-out hover:text-yellow-500 hover:scale-105 hover:underline underline-offset-4"
                         >
-                            <img src={AsteroidLogo} alt="Asteroid" className="w-24 h-24 mb-2"></img>
+                            <img src={AsteroidLogo} alt="Asteroid" className="w-16 h-16 md:w-24 md:h-24 mb-2"></img>
                             Asteroids
                         </NavLink>
                     </li>

@@ -4,9 +4,12 @@ import fetchMarsWeather from '../services/nasaMarsWeatherService_frontend';
 const MarsWeatherComponent = () => {
     const [marsWeather, setMarsWeather] = useState(null); 
     const[error, setError] = useState(null); 
+    const[loading, setLoading] = useState(false); 
 
     useEffect(() => {
         const getData = async () => {
+            setLoading(true); 
+
             try {
                 console.log("Fetching Mars Weather..."); 
                 const data = await fetchMarsWeather();
@@ -15,14 +18,25 @@ const MarsWeatherComponent = () => {
             }
             catch (error) {
                 setError(error.message); 
+            } finally {
+                setLoading(false); 
             }
         }; 
 
         getData(); 
     }, []); 
 
+    if (loading) {
+        return (
+            <div className='flex justify-center items-center flex-col mt-10'>
+                <div className='animate-spin h-16 w-16 border-4 border-blue-500 border-t-transparent rounded-full'></div>
+                <p className='text-slate-800 mt-8'>Loading</p>
+            </div>
+        ); 
+    }
+
     if (error) return <p className='text-red-600 text-center'>{error}</p>;
-    if (!marsWeather) return <p className='text-center text-gray-700'>Loading...</p>;
+    if (!marsWeather) return <p className='text-center text-gray-700'>Couldn't get weather info!</p>;
 
     return (
         <section className="mt-10 bg-gradient-to-b from-gray-50 to-gray-300 shadow-lg border border-gray-200 rounded-xl p-8 mx-auto max-w-6xl">
