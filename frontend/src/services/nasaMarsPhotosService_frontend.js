@@ -17,7 +17,8 @@ const fetchMarsPhotos = async(sol, camera) => {
 
         console.log(requestUrl); 
 
-        const response = await axios.get(requestUrl, { params }); 
+        const response = await axios.get("https://web-production-5cd4.up.railway.app/api/nasa/mars-photos", {params})
+        // const response = await axios.get(requestUrl, { params }); 
         return response.data; 
 
     } catch (error) {

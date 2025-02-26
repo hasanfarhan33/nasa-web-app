@@ -11,7 +11,8 @@ const fetchMarsWeather = async() => {
 
         console.log(requestUrl);
 
-        const response = await axios.get(requestUrl); 
+        const response = await axios.get("https://web-production-5cd4.up.railway.app/api/nasa/mars-weather"); 
+        // const response = await axios.get(requestUrl); 
         console.log("Fetched weather data:", response.data)
         return response.data; 
     } catch (error) {

@@ -13,7 +13,8 @@ const fetchAsteroids = async(startDate, endDate) => {
 
         console.log(requestUrl); 
 
-        const response = await axios.get(requestUrl, { params }); 
+        const response = await axios.get("https://web-production-5cd4.up.railway.app/api/nasa/asteroids"); 
+        // const response = await axios.get(requestUrl, { params }); 
         return response.data; 
 
     } catch (error) {

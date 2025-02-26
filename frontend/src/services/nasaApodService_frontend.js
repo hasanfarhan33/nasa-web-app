@@ -12,7 +12,11 @@ const fetchAPOD = async() => {
 
         console.log(requestUrl); 
 
-        const response = await axios.get(requestUrl);
+        // const response = await axios.get(requestUrl);
+
+        // Hardcoding URL because for some reason the env file isn't working properly
+        const response = await axios.get("https://web-production-5cd4.up.railway.app/api/nasa/apod");
+         
         return response.data; 
     } catch (error) {
         console.error("File name: nasaApodService_frontend.js --> Error fetching APOD: ", error); 
