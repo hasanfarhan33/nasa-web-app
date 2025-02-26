@@ -14,6 +14,19 @@ app.use(cors());
 // NASA API Routes 
 app.use("/api/nasa", nasaRoutes); 
 
+// Creating API Home Page 
+app.get("/", (req, res) => {
+    res.json({
+        greeting: "Welcome to SpacePeek Backend", 
+        routes: "/api/nasa/{}", 
+        apod: "apod", 
+        marsWeather: "mars-weather", 
+        marsPhotos: "mars-photos", 
+        asteroids: "asteroids"
+    })
+})
+
+
 // CONNECTING TO THE SERVER 
 const PORT = process.env.PORT || 5000; 
 app.listen(PORT, () => console.log("SERVER IS RUNNING ON PORT " + PORT)); 
