@@ -7,7 +7,7 @@ const fetchAsteroids = async(startDate, endDate) => {
             end_date: endDate
         }
 
-        const response = await axios.get("http://localhost:9000/api/nasa/asteroids", { params }); 
+        const response = await axios.get(process.env.BACKEND_URL + "/api/nasa/asteroids", { params }); 
         return response.data; 
 
     } catch (error) {
