@@ -6,8 +6,10 @@ const fetchAsteroids = async(startDate, endDate) => {
             start_date: startDate, 
             end_date: endDate
         }
+        const backendUrl = process.env.BACKEND_URL; 
+        const endpoint = process.env.ASTEROIDS_ENDPOINT; 
 
-        const response = await axios.get(process.env.BACKEND_URL + process.env.ASTEROIDS_ENDPOINT, { params }); 
+        const response = await axios.get(backendUrl + endpoint, { params }); 
         return response.data; 
 
     } catch (error) {
