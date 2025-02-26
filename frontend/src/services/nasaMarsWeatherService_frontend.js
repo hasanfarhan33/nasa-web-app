@@ -3,7 +3,7 @@ import axios from "axios";
 // Fetching the information 
 const fetchMarsWeather = async() => {
     try {
-        const response = await axios.get(process.env.BACKEND_URL + "/api/nasa/mars-weather"); 
+        const response = await axios.get(process.env.BACKEND_URL + process.env.MARS_WEATHER_ENDPOINT); 
         console.log("Fetched weather data:", response.data)
         return response.data; 
     } catch (error) {
