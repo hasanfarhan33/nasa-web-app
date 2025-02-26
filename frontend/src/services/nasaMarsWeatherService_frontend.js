@@ -7,7 +7,11 @@ const fetchMarsWeather = async() => {
         const backendUrl = process.env.BACKEND_URL; 
         const endpoint = process.env.MARS_WEATHER_ENDPOINT; 
 
-        const response = await axios.get(backendUrl + endpoint); 
+        const requestUrl = backendUrl + endpoint; 
+
+        console.log(requestUrl);
+
+        const response = await axios.get(requestUrl); 
         console.log("Fetched weather data:", response.data)
         return response.data; 
     } catch (error) {

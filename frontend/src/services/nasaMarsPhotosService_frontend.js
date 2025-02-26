@@ -13,7 +13,11 @@ const fetchMarsPhotos = async(sol, camera) => {
         const backendUrl = process.env.BACKEND_URL; 
         const endpoint = process.env.MARS_PHOTOS_ENDPOINT; 
 
-        const response = await axios.get(backendUrl + endpoint, { params }); 
+        const requestUrl = backendUrl + endpoint; 
+
+        console.log(requestUrl); 
+
+        const response = await axios.get(requestUrl, { params }); 
         return response.data; 
 
     } catch (error) {

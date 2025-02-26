@@ -8,8 +8,12 @@ const fetchAsteroids = async(startDate, endDate) => {
         }
         const backendUrl = process.env.BACKEND_URL; 
         const endpoint = process.env.ASTEROIDS_ENDPOINT; 
+        
+        const requestUrl = backendUrl + endpoint; 
 
-        const response = await axios.get(backendUrl + endpoint, { params }); 
+        console.log(requestUrl); 
+
+        const response = await axios.get(requestUrl, { params }); 
         return response.data; 
 
     } catch (error) {
