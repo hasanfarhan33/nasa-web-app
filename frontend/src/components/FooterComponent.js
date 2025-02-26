@@ -6,7 +6,7 @@ const FooterComponent = () => {
                 <div className="flex gap-6 text-lg mb-4 md:mb-0">
                     <p className="text-sm">
                         Data Source:{" "}
-                        <a href="https://api.nasa.gov/" target="_blank" className="text-slate-400 hover:text-yellow-400 ml-2">
+                        <a href="https://api.nasa.gov/" target="_blank" className="text-slate-400 hover:text-yellow-400 ml-2" rel="noopener noreferrer">
                             NASA Open APIs
                         </a>
                     </p>
@@ -16,10 +16,10 @@ const FooterComponent = () => {
                 <div className="text-sm flex flex-col md:flex-row justify-evenly items-center gap-6 px-10">
                     <p>Developed By: <span className="font-bold">Farhan Hasan</span></p>
                     <div className="flex gap-6 sm:gap-4 mt-4 md:mt-0">
-                        <a href="https://github.com/hasanfarhan33/nasa-web-app" target="_blank" className="hover:text-yellow-400">
+                        <a href="https://github.com/hasanfarhan33/nasa-web-app" target="_blank" className="hover:text-yellow-400" rel="noopener noreferrer">
                             Github
                         </a>
-                        <a href="https://www.linkedin.com/in/farhan-hasan-32baa1176/" target="_blank" className="hover:text-yellow-400">
+                        <a href="https://www.linkedin.com/in/farhan-hasan-32baa1176/" target="_blank" className="hover:text-yellow-400" rel="noopener noreferrer">
                             LinkedIn
                         </a>
                     </div>
