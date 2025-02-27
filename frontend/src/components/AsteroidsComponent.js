@@ -77,7 +77,7 @@ const AsteroidsComponent = () => {
                                 <div className="dateContainer text-xl font-bold text-center mb-4">{date}</div>
                                 <div className="tableHeaders hidden sm:grid grid-cols-4 gap-4 font-semibold mb-4">
                                     <p>Astreroid Name</p>
-                                    <p>Miss Distance (kms)</p>
+                                    <p>Miss Distance (km)</p>
                                     <p>Diameter Min (m)</p>
                                     <p>Diameter Max (m)</p>
                                 </div>
@@ -91,15 +91,15 @@ const AsteroidsComponent = () => {
                                             </div>
                                             <div className="sm:col-span-1">
                                                 <p className="font-semibold sm:hidden">Miss Distance:</p>
-                                                <p>{asteroid.miss_distance_km}</p>
+                                                <p>{(Math.round(asteroid.miss_distance_km * 100) / 100).toFixed(2)}</p>
                                             </div>
                                             <div className="sm:col-span-1">
                                                 <p className="font-semibold sm:hidden">Diameter Min (m):</p>
-                                                <p>{asteroid.estimated_diameter_min_m}</p>
+                                                <p>{(Math.round(asteroid.estimated_diameter_min_m * 100) / 100).toFixed(2)}</p>
                                             </div>
                                             <div className="sm:col-span-1">
                                                 <p className="font-semibold sm:hidden">Diameter Max (m):</p>
-                                                <p>{asteroid.estimated_diameter_max_m}</p>
+                                                <p>{(Math.round(asteroid.estimated_diameter_max_m * 100) / 100).toFixed(2)}</p>
                                             </div>
                                         </div>
                                     </div>

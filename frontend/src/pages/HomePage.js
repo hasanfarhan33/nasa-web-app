@@ -9,7 +9,7 @@ const HomePage = () => {
             <h1 className="text-4xl font-bold text-center text-slate-800 mb-8">SpacePeek: Get Useful Info About Space!</h1>
             <ApodComponent />
             <section className="mt-10 text-center">
-                <h2 className="text-3xl font-bold mb-6 underline">Explore</h2>
+                <h2 className="text-3xl font-bold mb-6">Explore</h2>
                 <ul className="flex flex-wrap justify-center gap-10 md:gap-20 font-bold text-xl">
                     <li>
                         <NavLink 
