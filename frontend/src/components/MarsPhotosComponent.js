@@ -42,8 +42,6 @@ const MarsPhotosComponent = () => {
                     <li><span className='font-bold'>MAHLI:</span> Mars Hands Lens Imager</li>
                     <li><span className='font-bold'>MARDI:</span> Mars Descent Imager</li>
                     <li><span className='font-bold'>NAVCAM:</span> Navigation Camera</li>
-                    <li><span className='font-bold'>PANCAM:</span> Panoramic Camera</li>
-                    <li><span className='font-bold'>MINITES:</span> Miniature Thermal Emission Spectrometer</li>
                 </ol>
             </div>
             
@@ -78,8 +76,6 @@ const MarsPhotosComponent = () => {
                             <option value="mahli">MAHLI</option>
                             <option value="mardi">MARDI</option>
                             <option value="navcam">NAVCAM</option>
-                            <option value="pancam">PANCAM</option>
-                            <option value="minites">MINITES</option>
                         </select>
                     </div>
                 </div>
